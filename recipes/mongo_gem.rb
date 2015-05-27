@@ -17,7 +17,7 @@ package sasldev_pkg do
 end.run_action(:install)
 
 node['mongodb']['ruby_gems'].each do |gem, version|
-  chef_gem gem do
+  gem_package gem do
     version version
   end
 end
